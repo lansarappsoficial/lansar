@@ -18,7 +18,7 @@ const CTASection: React.FC = () => {
             </h2>
             <p className="text-lg md:text-xl text-gray-700 mb-10 max-w-3xl mx-auto">
               Solicite agora seu Diagnóstico Gratuito e receba um plano personalizado com oportunidades 
-              reais de automação.
+              reais de automação para o seu negócio.
             </p>
             <div className="text-center">
               <Button className="bg-lansar hover:bg-lansar-dark text-white font-medium py-3 px-6 rounded-lg inline-flex items-center transition-all duration-300 shadow-md text-lg">
