@@ -2,6 +2,7 @@
 import React from "react";
 import { Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import ArrowRight from "./ArrowRight";
 
 const VideoCard: React.FC<{
   quote: string;
