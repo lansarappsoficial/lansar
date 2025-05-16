@@ -34,12 +34,12 @@ const VideoCard: React.FC<{
 const TestimonialsSection: React.FC = () => {
   const testimonials = [
     {
-      quote: "🎥 "Conseguimos triplicar a produtividade do nosso time comercial sem contratar ninguém."",
+      quote: '🎥 "Conseguimos triplicar a produtividade do nosso time comercial sem contratar ninguém."',
       author: "Fernando Oliveira",
       position: "Diretor de Vendas - SaaS B2B"
     },
     {
-      quote: "🎥 "Em uma semana, tínhamos agentes de IA prospectando novos clientes enquanto dormíamos."",
+      quote: '🎥 "Em uma semana, tínhamos agentes de IA prospectando novos clientes enquanto dormíamos."',
       author: "Laura Matos",
       position: "Cofundadora - Agência Digital"
     }
