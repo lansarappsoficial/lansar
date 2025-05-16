@@ -14,14 +14,6 @@ const HeroSection: React.FC = () => {
           <h2 className="text-xl md:text-2xl lg:text-3xl text-gray-700 mb-8 animate-fade-in" style={{animationDelay: "0.2s"}}>
             A IA que automatiza sua operação comercial de ponta a ponta
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto animate-fade-in" style={{animationDelay: "0.4s"}}>
-            Você já imaginou ter um time de vendas que trabalha 24/7, sem esquecer um follow-up, 
-            sem perder um lead e sem pedir aumento? Com a Lansar Apps, isso é realidade.
-          </p>
-          <p className="text-lg md:text-xl text-gray-700 mb-10 animate-fade-in" style={{animationDelay: "0.6s"}}>
-            Nossa IA cuida de todo o seu processo comercial — da prospecção à recompra — 
-            para que você e seu time foquem no que realmente importa: fechar negócios.
-          </p>
           <Button className="cta-button text-lg animate-fade-in" style={{animationDelay: "0.8s"}}>
             <span className="mr-2">👉</span> Solicite seu Diagnóstico Gratuito <ArrowRight className="ml-2 h-5 w-5" />
           </Button>

@@ -2,6 +2,7 @@
 import React from 'react';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
+import BenefitsSection from '@/components/BenefitsSection';
 import ProblemsSection from '@/components/ProblemsSection';
 import AgentsSection from '@/components/AgentsSection';
 import DiagnosisSection from '@/components/DiagnosisSection';
@@ -16,6 +17,7 @@ const Index = () => {
     <div className="min-h-screen overflow-x-hidden">
       <Header />
       <HeroSection />
+      <BenefitsSection />
       <ProblemsSection />
       <AgentsSection />
       <DiagnosisSection />
