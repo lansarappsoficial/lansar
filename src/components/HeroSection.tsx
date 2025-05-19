@@ -1,19 +1,9 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Zap } from "lucide-react";
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
-
+import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 const HeroSection: React.FC = () => {
-  return (
-    <section className="pt-32 pb-20 md:pt-40 md:pb-32 bg-gradient-to-br from-gray-900 to-gray-800 text-white relative overflow-hidden">
+  return <section className="pt-32 pb-20 md:pt-40 md:pb-32 bg-gradient-to-br from-gray-900 to-gray-800 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMyNTI5MmUiIGZpbGwtb3BhY2l0eT0iMC40Ij48cGF0aCBkPSJNMzYgMzRjMC0yLjItMS44LTQtNC00cy00IDEuOC00IDQgMS44IDQgNCA0IDQtMS44IDQtNHptMC0zMGMwLTIuMi0xLjgtNC00LTRzLTQgMS44LTQgNCAxLjggNCA0IDQgNC0xLjggNC00em0wIDYwYzAtMi4yLTEuOC00LTQtNHMtNCAxLjgtNCA0IDEuOCA0IDQgNCA0LTEuOCA0LTR6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-10"></div>
       
       <div className="container mx-auto px-4 relative z-10">
@@ -28,17 +18,23 @@ const HeroSection: React.FC = () => {
             VENDA MAIS COM <span className="gradient-text">MENOS ESFORÇO</span>
           </h1>
           
-          <h2 className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 animate-fade-in" style={{animationDelay: "0.2s"}}>
+          <h2 className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 animate-fade-in" style={{
+          animationDelay: "0.2s"
+        }}>
             Automatize sua operação comercial de ponta a ponta com inteligência artificial
           </h2>
 
-          <p className="text-lg text-gray-300 mb-8 animate-fade-in" style={{animationDelay: "0.4s"}}>
+          <p className="text-lg text-gray-300 mb-8 animate-fade-in" style={{
+          animationDelay: "0.4s"
+        }}>
             Da prospecção à recompra, transforme seu time de vendas com a Lansar
           </p>
           
           <Sheet>
             <SheetTrigger asChild>
-              <Button className="cta-button text-lg animate-fade-in hover:scale-105 transition-transform" style={{animationDelay: "0.8s"}}>
+              <Button className="cta-button text-lg animate-fade-in hover:scale-105 transition-transform" style={{
+              animationDelay: "0.8s"
+            }}>
                 <span className="mr-2">👉</span> SOLICITE SEU DIAGNÓSTICO GRATUITO <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </SheetTrigger>
@@ -49,7 +45,10 @@ const HeroSection: React.FC = () => {
                   Escolha o melhor horário para conversarmos sobre como podemos impulsionar suas vendas.
                 </SheetDescription>
               </SheetHeader>
-              <div className="calendly-inline-widget" data-url="https://calendly.com/lansarapps/30min" style={{minWidth:"320px", height:"700px"}}></div>
+              <div className="calendly-inline-widget" data-url="https://calendly.com/lansarapps/30min" style={{
+              minWidth: "320px",
+              height: "700px"
+            }}></div>
               <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
             </SheetContent>
           </Sheet>
@@ -57,22 +56,12 @@ const HeroSection: React.FC = () => {
       </div>
       
       <div className="mt-16 max-w-6xl mx-auto px-4 relative z-10">
-        <div className="bg-gradient-to-br from-purple-600/10 to-blue-600/10 p-6 md:p-10 rounded-2xl border border-blue-500/20 shadow-lg backdrop-blur-sm">
-          <div className="bg-black/40 backdrop-blur-sm rounded-xl shadow-inner p-6 md:p-10 border border-blue-500/10">
-            <img 
-              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80" 
-              alt="Plataforma Lansar AI" 
-              className="w-full h-auto rounded-lg shadow-xl border border-blue-300/10"
-            />
-          </div>
-        </div>
+        
       </div>
       
       {/* Tech decoration elements */}
       <div className="absolute top-20 left-10 w-64 h-64 bg-lansar/5 rounded-full filter blur-3xl"></div>
       <div className="absolute bottom-20 right-10 w-80 h-80 bg-blue-500/5 rounded-full filter blur-3xl"></div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
