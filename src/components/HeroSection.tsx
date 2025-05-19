@@ -2,6 +2,14 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Zap } from "lucide-react";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 const HeroSection: React.FC = () => {
   return (
@@ -17,16 +25,34 @@ const HeroSection: React.FC = () => {
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in bg-clip-text text-transparent bg-gradient-to-r from-lansar-light via-white to-lansar">
-            Venda mais com <span className="gradient-text">menos esforço</span>
+            VENDA MAIS COM <span className="gradient-text">MENOS ESFORÇO</span>
           </h1>
           
           <h2 className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 animate-fade-in" style={{animationDelay: "0.2s"}}>
-            A IA que automatiza sua operação comercial de ponta a ponta
+            Automatize sua operação comercial de ponta a ponta com inteligência artificial
           </h2>
+
+          <p className="text-lg text-gray-300 mb-8 animate-fade-in" style={{animationDelay: "0.4s"}}>
+            Da prospecção à recompra, transforme seu time de vendas com a Lansar
+          </p>
           
-          <Button className="cta-button text-lg animate-fade-in" style={{animationDelay: "0.8s"}}>
-            <span className="mr-2">👉</span> Solicite seu Diagnóstico Gratuito <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button className="cta-button text-lg animate-fade-in hover:scale-105 transition-transform" style={{animationDelay: "0.8s"}}>
+                <span className="mr-2">👉</span> SOLICITE SEU DIAGNÓSTICO GRATUITO <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent className="w-full sm:max-w-md md:max-w-lg overflow-y-auto">
+              <SheetHeader>
+                <SheetTitle>Agende seu Diagnóstico Gratuito</SheetTitle>
+                <SheetDescription>
+                  Escolha o melhor horário para conversarmos sobre como podemos impulsionar suas vendas.
+                </SheetDescription>
+              </SheetHeader>
+              <div className="calendly-inline-widget" data-url="https://calendly.com/lansarapps/30min" style={{minWidth:"320px", height:"700px"}}></div>
+              <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
       
