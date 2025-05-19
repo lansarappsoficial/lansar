@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -58,42 +58,62 @@ const Header: React.FC = () => {
           size="icon"
           className="md:hidden"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}
         >
-          <Menu />
+          {isMobileMenuOpen ? <X /> : <Menu />}
         </Button>
       </div>
 
+      {/* Mobile Menu Overlay */}
+      <div
+        className={`md:hidden fixed inset-0 bg-black/50 z-40 transition-opacity duration-300 ${
+          isMobileMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+        onClick={() => setIsMobileMenuOpen(false)}
+      ></div>
+
       {/* Mobile Menu */}
       <div
-        className={`md:hidden absolute top-full left-0 right-0 bg-white border-t border-gray-100 shadow-lg transition-transform duration-300 transform ${
-          isMobileMenuOpen ? "translate-y-0" : "-translate-y-full"
-        }`}
+        className={`md:hidden fixed top-0 right-0 w-[75%] max-w-sm h-full bg-white z-50 shadow-xl transform transition-transform duration-300 ease-in-out ${
+          isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+        } flex flex-col pt-20 pb-6 px-6 overflow-y-auto`}
       >
-        <div className="container mx-auto py-4 px-4 flex flex-col space-y-4">
+        {/* Close button inside mobile menu */}
+        <Button
+          variant="ghost"
+          size="icon"
+          className="absolute top-5 right-5"
+          onClick={() => setIsMobileMenuOpen(false)}
+          aria-label="Fechar menu"
+        >
+          <X />
+        </Button>
+        
+        <div className="flex flex-col space-y-6">
           <a
             href="#problems"
-            className="text-gray-700 py-2 hover:text-lansar"
+            className="text-gray-700 py-2 text-lg font-medium hover:text-lansar border-b border-gray-100"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Problemas
           </a>
           <a
             href="#agents"
-            className="text-gray-700 py-2 hover:text-lansar"
+            className="text-gray-700 py-2 text-lg font-medium hover:text-lansar border-b border-gray-100"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Agentes IA
           </a>
           <a
             href="#diagnosis"
-            className="text-gray-700 py-2 hover:text-lansar"
+            className="text-gray-700 py-2 text-lg font-medium hover:text-lansar border-b border-gray-100"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Diagnóstico
           </a>
           <a
             href="#why-us"
-            className="text-gray-700 py-2 hover:text-lansar"
+            className="text-gray-700 py-2 text-lg font-medium hover:text-lansar border-b border-gray-100"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Por que nós
