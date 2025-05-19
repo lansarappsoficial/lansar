@@ -1,7 +1,9 @@
+
 import React from "react";
 import { Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ArrowRight from "./ArrowRight";
+
 const VideoCard: React.FC<{
   quote: string;
   author: string;
@@ -27,6 +29,7 @@ const VideoCard: React.FC<{
       </div>
     </div>;
 };
+
 const TestimonialsSection: React.FC = () => {
   const testimonials = [{
     quote: '🎥 "Conseguimos triplicar a produtividade do nosso time comercial sem contratar ninguém."',
@@ -37,6 +40,24 @@ const TestimonialsSection: React.FC = () => {
     author: "Laura Matos",
     position: "Cofundadora - Agência Digital"
   }];
-  return;
+  
+  return (
+    <section className="py-16 px-4 md:px-8">
+      <div className="container mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">O que nossos clientes dizem</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {testimonials.map((testimonial, index) => (
+            <VideoCard 
+              key={index}
+              quote={testimonial.quote}
+              author={testimonial.author}
+              position={testimonial.position}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };
+
 export default TestimonialsSection;
