@@ -13,7 +13,8 @@ const VideoCard: React.FC<{
   author,
   position
 }) => {
-  return <div className="bg-white rounded-xl shadow-md overflow-hidden">
+  return (
+    <div className="bg-white rounded-xl shadow-md overflow-hidden">
       <div className="bg-gray-200 h-52 flex items-center justify-center relative group">
         <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-all duration-300"></div>
         <div className="relative z-10">
@@ -27,7 +28,8 @@ const VideoCard: React.FC<{
         <p className="text-gray-800 font-semibold">{author}</p>
         <p className="text-gray-500">{position}</p>
       </div>
-    </div>;
+    </div>
+  );
 };
 
 const TestimonialsSection: React.FC = () => {

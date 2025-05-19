@@ -98,9 +98,7 @@ const Header: React.FC = () => {
           >
             Por que nós
           </a>
-          <Button className="cta-button w-full">
-            Solicitar Diagnóstico
-          </Button>
+          {/* Removed the "Solicitar Diagnóstico" button from mobile menu */}
         </div>
       </div>
     </header>
