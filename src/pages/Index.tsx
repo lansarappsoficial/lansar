@@ -6,6 +6,8 @@ import BenefitsSection from '@/components/BenefitsSection';
 import ProblemsSection from '@/components/ProblemsSection';
 import AgentsSection from '@/components/AgentsSection';
 import DiagnosisSection from '@/components/DiagnosisSection';
+import BeneficiariesSection from '@/components/BeneficiariesSection';
+import ClientsSection from '@/components/ClientsSection';
 import WhyUsSection from '@/components/WhyUsSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import CTASection from '@/components/CTASection';
@@ -20,7 +22,9 @@ const Index = () => {
       <BenefitsSection />
       <ProblemsSection />
       <AgentsSection />
+      <BeneficiariesSection />
       <DiagnosisSection />
+      <ClientsSection />
       <WhyUsSection />
       <TestimonialsSection />
       <CTASection />
