@@ -18,8 +18,8 @@ const VideoCard: React.FC<{
       <div className="bg-gray-200 h-52 flex items-center justify-center relative group">
         <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-all duration-300"></div>
         <div className="relative z-10">
-          <Button size="icon" className="h-16 w-16 rounded-full bg-white/90 hover:bg-white text-lansar hover:text-lansar-dark transition-colors">
-            <Play className="h-8 w-8" />
+          <Button size="icon" className="h-14 w-14 sm:h-16 sm:w-16 rounded-full bg-white/90 hover:bg-white text-lansar hover:text-lansar-dark transition-colors">
+            <Play className="h-7 w-7 sm:h-8 sm:w-8" />
           </Button>
         </div>
       </div>
