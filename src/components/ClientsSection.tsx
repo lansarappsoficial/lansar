@@ -28,14 +28,14 @@ const ClientsSection: React.FC = () => {
   const [api, setApi] = useState<any>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Auto-scroll effect for the carousel
+  // Auto-scroll effect for the carousel with continuous loop
   useEffect(() => {
     if (!api) return;
 
     // Set up interval for automatic scrolling
     const interval = setInterval(() => {
       api.scrollNext();
-    }, 3000); // Change slide every 3 seconds
+    }, 2000); // Faster scrolling - change slide every 2 seconds
 
     // Clear interval on component unmount
     return () => clearInterval(interval);
@@ -44,7 +44,7 @@ const ClientsSection: React.FC = () => {
   return (
     <section className="section-padding bg-white">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="bg-white p-8 rounded-2xl shadow-xl border border-lansar/10 animate-fade-in">
             <h2 className="text-2xl font-bold mb-6 text-center">
               CLIENTES E PROJETOS
@@ -57,13 +57,14 @@ const ClientsSection: React.FC = () => {
                 opts={{
                   align: "start",
                   loop: true,
+                  dragFree: true,
                 }}
                 setApi={setApi}
               >
                 <CarouselContent>
                   {clientLogos.map((logo, index) => (
-                    <CarouselItem key={index} className="md:basis-1/4 lg:basis-1/5">
-                      <div className="flex items-center justify-center h-24 p-4">
+                    <CarouselItem key={index} className="md:basis-1/3 lg:basis-1/4">
+                      <div className="flex items-center justify-center h-28 sm:h-32 p-3">
                         <img 
                           src={logo} 
                           alt={`Cliente ${index + 1}`} 
