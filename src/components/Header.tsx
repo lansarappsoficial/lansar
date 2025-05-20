@@ -28,39 +28,21 @@ const Header: React.FC = () => {
           : "bg-transparent py-5"
       }`}
     >
-      <div className="container mx-auto flex justify-between items-center px-4">
+      <div className="container mx-auto flex justify-center items-center px-4 relative">
+        {/* Centered logo for all screen sizes */}
         <div className="flex items-center">
           <span className="text-2xl font-bold gradient-text">Teste Apps</span>
         </div>
 
-        {/* Desktop Menu */}
-        <nav className="hidden md:flex items-center space-x-8">
-          <a href="#problems" className="text-gray-700 hover:text-lansar transition-colors">
-            Problemas
-          </a>
-          <a href="#agents" className="text-gray-700 hover:text-lansar transition-colors">
-            Agentes IA
-          </a>
-          <a href="#diagnosis" className="text-gray-700 hover:text-lansar transition-colors">
-            Diagnóstico
-          </a>
-          <a href="#why-us" className="text-gray-700 hover:text-lansar transition-colors">
-            Por que nós
-          </a>
-          <Button className="cta-button">
-            Solicitar Diagnóstico
-          </Button>
-        </nav>
-
-        {/* Mobile Menu Button */}
+        {/* Mobile Menu Button (positioned absolutely to the right) */}
         <Button
           variant="ghost"
           size="icon"
-          className="md:hidden"
+          className="md:hidden absolute right-4 text-gray-400 hover:text-gray-600"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}
         >
-          {isMobileMenuOpen ? <X /> : <Menu />}
+          {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </Button>
       </div>
 
@@ -82,11 +64,11 @@ const Header: React.FC = () => {
         <Button
           variant="ghost"
           size="icon"
-          className="absolute top-5 right-5"
+          className="absolute top-5 right-5 text-gray-400 hover:text-gray-600"
           onClick={() => setIsMobileMenuOpen(false)}
           aria-label="Fechar menu"
         >
-          <X />
+          <X className="h-6 w-6" />
         </Button>
         
         <div className="flex flex-col space-y-6">
@@ -118,7 +100,6 @@ const Header: React.FC = () => {
           >
             Por que nós
           </a>
-          {/* Removed the "Solicitar Diagnóstico" button from mobile menu */}
         </div>
       </div>
     </header>
