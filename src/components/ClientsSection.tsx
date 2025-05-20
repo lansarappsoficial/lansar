@@ -44,7 +44,7 @@ const ClientsSection: React.FC = () => {
   return (
     <section className="section-padding bg-white">
       <div className="container mx-auto px-4">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="bg-white p-8 rounded-2xl shadow-xl border border-lansar/10 animate-fade-in">
             <h2 className="text-2xl font-bold mb-6 text-center">
               CLIENTES E PROJETOS
@@ -52,7 +52,7 @@ const ClientsSection: React.FC = () => {
             <p className="text-gray-700 mb-6 text-center">
               Já ajudamos empresas de diversos setores a faturarem milhões com nossas soluções de tecnologia e inteligência artificial.
             </p>
-            <div className="mt-4 py-6 px-2">
+            <div className="mt-4 py-8 px-2">
               <Carousel
                 opts={{
                   align: "start",
@@ -63,8 +63,8 @@ const ClientsSection: React.FC = () => {
               >
                 <CarouselContent>
                   {clientLogos.map((logo, index) => (
-                    <CarouselItem key={index} className="md:basis-1/3 lg:basis-1/4">
-                      <div className="flex items-center justify-center h-28 sm:h-32 p-3">
+                    <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                      <div className="flex items-center justify-center h-52 sm:h-64 p-4">
                         <img 
                           src={logo} 
                           alt={`Cliente ${index + 1}`} 
