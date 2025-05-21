@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
               <img 
                 src="/lovable-uploads/f63297a0-e13d-47d8-bcba-f96660ee0b43.png" 
                 alt="Lansar Apps" 
-                className="h-8"
+                className="h-[54px] w-[186px] object-contain"
               />
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
