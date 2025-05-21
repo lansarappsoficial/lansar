@@ -1,7 +1,16 @@
+
 import React from "react";
 import { Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ArrowRight from "./ArrowRight";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+} from "@/components/ui/carousel";
+
 const VideoCard: React.FC<{
   quote: string;
   author: string;
@@ -27,6 +36,7 @@ const VideoCard: React.FC<{
       </div>
     </div>;
 };
+
 const TestimonialsSection: React.FC = () => {
   const testimonials = [{
     quote: '🎥 "Conseguimos triplicar a produtividade do nosso time comercial sem contratar ninguém."',
@@ -37,6 +47,45 @@ const TestimonialsSection: React.FC = () => {
     author: "Laura Matos",
     position: "Cofundadora - Agência Digital"
   }];
-  return;
+  
+  return (
+    <section className="py-16 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold mb-4">O que nossos clientes dizem</h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Veja como a Lansar Apps está transformando empresas com automação inteligente
+          </p>
+        </div>
+
+        <div className="max-w-6xl mx-auto">
+          <Carousel className="w-full">
+            <CarouselContent>
+              {testimonials.map((testimonial, index) => (
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2 p-2">
+                  <VideoCard 
+                    quote={testimonial.quote}
+                    author={testimonial.author}
+                    position={testimonial.position}
+                  />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="flex justify-center mt-6">
+              <CarouselPrevious className="relative static mx-2" />
+              <CarouselNext className="relative static mx-2" />
+            </div>
+          </Carousel>
+        </div>
+
+        <div className="text-center mt-12">
+          <Button variant="default" className="bg-lansar hover:bg-lansar-dark">
+            Conheça todos os casos de sucesso <ArrowRight />
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
 };
+
 export default TestimonialsSection;
