@@ -31,7 +31,11 @@ const Header: React.FC = () => {
       <div className="container mx-auto flex justify-center items-center px-4 relative">
         {/* Centered logo for all screen sizes */}
         <div className="flex items-center">
-          <span className="text-2xl font-bold gradient-text">Teste Apps</span>
+          <img 
+            src="/lovable-uploads/f63297a0-e13d-47d8-bcba-f96660ee0b43.png" 
+            alt="Lansar Apps" 
+            className="h-8"
+          />
         </div>
 
         {/* Mobile Menu Button (positioned absolutely to the right) */}

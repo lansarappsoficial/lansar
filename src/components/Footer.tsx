@@ -11,7 +11,11 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center mb-4">
-              <span className="text-2xl font-bold gradient-text">Teste Apps</span>
+              <img 
+                src="/lovable-uploads/f63297a0-e13d-47d8-bcba-f96660ee0b43.png" 
+                alt="Lansar Apps" 
+                className="h-8"
+              />
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
               Automatizando processos comerciais com IA para que você se concentre em fechar negócios.
@@ -40,7 +44,7 @@ const Footer: React.FC = () => {
         </div>
         <div className="mt-12 pt-6 border-t border-gray-800 text-center">
           <p className="text-gray-400">
-            © {year} Teste Apps. Todos os direitos reservados.
+            © {year} Lansar Apps. Todos os direitos reservados.
           </p>
         </div>
       </div>
