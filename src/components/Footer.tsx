@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
         </div>
         <div className="mt-12 pt-6 border-t border-gray-800 text-center">
           <p className="text-gray-400">
-            © {year} Lansar Apps. Todos os direitos reservados.
+            {year} Lansar Apps. Todos os direitos reservados.
           </p>
         </div>
       </div>

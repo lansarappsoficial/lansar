@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { 
   Carousel,
   CarouselContent,
@@ -27,6 +27,26 @@ const clientLogos = [
 const ClientsSection: React.FC = () => {
   const [api, setApi] = useState<any>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  // Animation observer setup
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        setIsVisible(true);
+        observer.disconnect();
+      }
+    }, { threshold: 0.2 });
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   // Auto-scroll effect for the carousel with continuous loop
   useEffect(() => {
@@ -42,10 +62,13 @@ const ClientsSection: React.FC = () => {
   }, [api]);
 
   return (
-    <section className="section-padding bg-white">
+    <section 
+      ref={sectionRef} 
+      className="section-padding bg-white"
+    >
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="bg-white p-8 rounded-2xl shadow-xl border border-lansar/10 animate-fade-in">
+          <div className={`bg-white p-8 rounded-2xl shadow-xl border border-lansar/10 transition-all duration-500 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h2 className="text-2xl font-bold mb-6 text-center">
               CLIENTES E PROJETOS
             </h2>
@@ -64,7 +87,7 @@ const ClientsSection: React.FC = () => {
                 <CarouselContent>
                   {clientLogos.map((logo, index) => (
                     <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                      <div className="flex items-center justify-center h-52 sm:h-64 p-4">
+                      <div className={`flex items-center justify-center h-52 sm:h-64 p-4 transition-all duration-500 delay-${(index % 5) * 100} ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
                         <img 
                           src={logo} 
                           alt={`Cliente ${index + 1}`} 
