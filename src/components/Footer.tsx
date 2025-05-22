@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center mb-4">
               <img 
-                src="/lovable-uploads/f63297a0-e13d-47d8-bcba-f96660ee0b43.png" 
+                src="/lovable-uploads/d0ec77dc-b23f-40ff-999f-3fa84ba55a46.png" 
                 alt="Lansar Apps" 
                 className="h-[54px] w-[186px] object-contain"
               />
