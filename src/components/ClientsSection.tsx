@@ -64,11 +64,12 @@ const ClientsSection: React.FC = () => {
   return (
     <section 
       ref={sectionRef} 
+      id="clients"
       className="section-padding bg-white"
     >
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <div className={`bg-white p-8 rounded-2xl shadow-xl border border-lansar/10 transition-all duration-500 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className={`bg-white p-8 rounded-2xl shadow-xl border border-lansar/10 transition-all duration-700 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
             <h2 className="text-2xl font-bold mb-6 text-center">
               CLIENTES E PROJETOS
             </h2>
@@ -87,7 +88,7 @@ const ClientsSection: React.FC = () => {
                 <CarouselContent>
                   {clientLogos.map((logo, index) => (
                     <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                      <div className={`flex items-center justify-center h-52 sm:h-64 p-4 transition-all duration-500 delay-${(index % 5) * 100} ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
+                      <div className={`flex items-center justify-center h-52 sm:h-64 p-4 transition-all duration-700 delay-${(index % 5) * 100} ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
                         <img 
                           src={logo} 
                           alt={`Cliente ${index + 1}`} 

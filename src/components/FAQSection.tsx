@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -8,6 +8,9 @@ import {
 } from "@/components/ui/accordion";
 
 const FAQSection: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+  
   const faqs = [
     {
       emoji: "🔄",
@@ -36,11 +39,35 @@ const FAQSection: React.FC = () => {
     }
   ];
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
-    <section className="section-padding bg-gradient-to-br from-gray-50 to-gray-100">
+    <section 
+      ref={sectionRef}
+      id="faq"
+      className="section-padding bg-gradient-to-br from-gray-50 to-gray-100"
+    >
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
-          <h2 className="section-title text-center mb-12 animate-fade-in">
+          <h2 className={`section-title text-center mb-12 transition-all duration-700 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             PERGUNTAS <span className="gradient-text">FREQUENTES</span>
           </h2>
           
@@ -49,8 +76,7 @@ const FAQSection: React.FC = () => {
               <AccordionItem 
                 key={index} 
                 value={`item-${index}`} 
-                className="border border-gray-200 rounded-lg bg-white shadow-sm animate-fade-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className={`border border-gray-200 rounded-lg bg-white shadow-sm transition-all duration-700 delay-${index * 100} transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
               >
                 <AccordionTrigger className="px-6 py-4 hover:bg-gray-50 rounded-t-lg data-[state=open]:rounded-b-none">
                   <div className="flex items-center">

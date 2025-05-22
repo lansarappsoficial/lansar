@@ -1,9 +1,12 @@
+
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
@@ -12,14 +15,16 @@ const Header: React.FC = () => {
         setIsScrolled(false);
       }
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white/95 backdrop-blur-sm shadow-sm py-3" : "bg-transparent py-5"} animate-fade-in`}>
       <div className="container mx-auto flex justify-center items-center px-4 relative">
         {/* Centered logo for all screen sizes */}
         <div className="flex items-center">
-          <img alt="Lansar Apps" src="/lovable-uploads/cb4b0736-6dd3-440e-9ade-fc25c031c6b2.png" className="h-[100px] w-[250px] object-contain" />
+          <img alt="Lansar Apps" src="/lovable-uploads/c98d9550-4f29-4c96-ae4c-f2114af17894.png" className="h-[100px] w-[250px] object-contain" />
         </div>
 
         {/* Mobile Menu Button (positioned absolutely to the right) */}
@@ -55,4 +60,5 @@ const Header: React.FC = () => {
       </div>
     </header>;
 };
+
 export default Header;
