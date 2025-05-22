@@ -1,21 +1,13 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
-
 const Footer: React.FC = () => {
   const year = new Date().getFullYear();
-
-  return (
-    <footer className="bg-gray-900 text-white py-16">
+  return <footer className="bg-gray-900 text-white py-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center mb-4">
-              <img 
-                src="/lovable-uploads/d0ec77dc-b23f-40ff-999f-3fa84ba55a46.png" 
-                alt="Lansar Apps" 
-                className="h-[54px] w-[186px] object-contain"
-              />
+              <img alt="Lansar Apps" src="/lovable-uploads/c98d9550-4f29-4c96-ae4c-f2114af17894.png" className="h-[80px] w-[200px] object-contain" />
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
               Automatizando processos comerciais com IA para que você se concentre em fechar negócios.
@@ -47,8 +39,6 @@ const Footer: React.FC = () => {
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
