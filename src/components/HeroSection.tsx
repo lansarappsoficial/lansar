@@ -54,7 +54,6 @@ const HeroSection: React.FC = () => {
                 minWidth: "320px",
                 height: "700px"
               }}></div>
-              <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
             </SheetContent>
           </Sheet>
         </div>

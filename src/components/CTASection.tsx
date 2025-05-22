@@ -64,7 +64,6 @@ const CTASection: React.FC = () => {
                 </SheetDescription>
               </SheetHeader>
               <div className="calendly-inline-widget" data-url="https://calendly.com/lansarapps/30min" style={{minWidth:"320px", height:"700px"}}></div>
-              <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
             </SheetContent>
           </Sheet>
         </div>
