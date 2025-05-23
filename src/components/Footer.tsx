@@ -35,12 +35,14 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div className="col-span-1 md:col-span-2">
-            <div className={`mb-4 transform transition-transform duration-700 ${isVisible ? 'translate-x-0' : '-translate-x-10'}`}>
-              <img alt="Lansar Apps" src="/lovable-uploads/c98d9550-4f29-4c96-ae4c-f2114af17894.png" className="h-[80px] w-[200px] object-contain ml-0" />
+            <div className={`transform transition-transform duration-700 ${isVisible ? 'translate-x-0' : '-translate-x-10'}`}>
+              <div className="flex flex-col items-start">
+                <img alt="Lansar Apps" src="/lovable-uploads/c98d9550-4f29-4c96-ae4c-f2114af17894.png" className="h-[80px] w-[200px] object-contain ml-0" />
+                <p className={`text-gray-300 mt-2 max-w-md transform transition-transform duration-700 delay-100 ${isVisible ? 'translate-x-0' : '-translate-x-10'}`}>
+                  Automatizando processos comerciais com IA para que você se concentre em fechar negócios.
+                </p>
+              </div>
             </div>
-            <p className={`text-gray-300 mb-6 max-w-md transform transition-transform duration-700 delay-100 ${isVisible ? 'translate-x-0' : '-translate-x-10'}`}>
-              Automatizando processos comerciais com IA para que você se concentre em fechar negócios.
-            </p>
           </div>
           <div className={`transform transition-transform duration-700 delay-200 ${isVisible ? 'translate-y-0' : 'translate-y-10'}`}>
             <h3 className="text-lg font-semibold mb-4">Links Rápidos</h3>
