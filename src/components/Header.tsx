@@ -20,7 +20,7 @@ const Header: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white/95 backdrop-blur-sm shadow-sm py-3" : "bg-transparent py-5"} animate-fade-in`}>
+  return <header className={`absolute top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white/95 backdrop-blur-sm shadow-sm py-3" : "bg-transparent py-5"} animate-fade-in`}>
       <div className="container mx-auto flex justify-center items-center px-4 relative">
         {/* Centered logo for all screen sizes */}
         <div className="flex items-center">
