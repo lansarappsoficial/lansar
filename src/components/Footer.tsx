@@ -1,6 +1,14 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 const Footer: React.FC = () => {
   const year = new Date().getFullYear();
@@ -60,7 +68,20 @@ const Footer: React.FC = () => {
               <li className="text-gray-300">+55 48 988731733</li>
             </ul>
             <div className="mt-6">
-              <Button className="cta-button">Solicitar Diagnóstico</Button>
+              <Sheet>
+                <SheetTrigger asChild>
+                  <Button className="cta-button">Solicitar Diagnóstico</Button>
+                </SheetTrigger>
+                <SheetContent className="w-full sm:max-w-md md:max-w-lg overflow-y-auto">
+                  <SheetHeader>
+                    <SheetTitle>Agende seu Diagnóstico Gratuito</SheetTitle>
+                    <SheetDescription>
+                      Escolha o melhor horário para conversarmos sobre como podemos impulsionar suas vendas.
+                    </SheetDescription>
+                  </SheetHeader>
+                  <div className="calendly-inline-widget" data-url="https://calendly.com/lansarapps/30min" style={{minWidth:"320px", height:"700px"}}></div>
+                </SheetContent>
+              </Sheet>
             </div>
           </div>
         </div>
