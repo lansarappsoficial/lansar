@@ -1,14 +1,5 @@
-
 import React, { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
 
 const Footer: React.FC = () => {
   const year = new Date().getFullYear();
@@ -36,8 +27,8 @@ const Footer: React.FC = () => {
   }, []);
 
   return (
-    <footer 
-      ref={footerRef} 
+    <footer
+      ref={footerRef}
       className={`bg-gray-900 text-white py-16 transition-opacity duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
     >
       <div className="container mx-auto px-4">
@@ -52,6 +43,7 @@ const Footer: React.FC = () => {
               </div>
             </div>
           </div>
+
           <div className={`transform transition-transform duration-700 delay-200 ${isVisible ? 'translate-y-0' : 'translate-y-10'}`}>
             <h3 className="text-lg font-semibold mb-4">Links Rápidos</h3>
             <ul className="space-y-2">
@@ -62,29 +54,26 @@ const Footer: React.FC = () => {
               <li><a href="#faq" className="text-gray-300 hover:text-white transition-colors">FAQ</a></li>
             </ul>
           </div>
+
           <div className={`transform transition-transform duration-700 delay-300 ${isVisible ? 'translate-y-0' : 'translate-y-10'}`}>
             <h3 className="text-lg font-semibold mb-4">Contato</h3>
             <ul className="space-y-2">
               <li className="text-gray-300">+55 48 988731733</li>
             </ul>
             <div className="mt-6">
-              <Sheet>
-                <SheetTrigger asChild>
-                  <Button className="cta-button">Solicitar Diagnóstico</Button>
-                </SheetTrigger>
-                <SheetContent className="w-full sm:max-w-md md:max-w-lg overflow-y-auto">
-                  <SheetHeader>
-                    <SheetTitle>Agende seu Diagnóstico Gratuito</SheetTitle>
-                    <SheetDescription>
-                      Escolha o melhor horário para conversarmos sobre como podemos impulsionar suas vendas.
-                    </SheetDescription>
-                  </SheetHeader>
-                  <div className="calendly-inline-widget" data-url="https://calendly.com/lansarapps/30min" style={{minWidth:"320px", height:"700px"}}></div>
-                </SheetContent>
-              </Sheet>
+              <a
+                href="https://calendly.com/lansarapps/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="cta-button">
+                  Solicitar Diagnóstico
+                </Button>
+              </a>
             </div>
           </div>
         </div>
+
         <div className={`mt-12 pt-6 border-t border-gray-800 text-center transform transition-opacity duration-700 delay-400 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
           <p className="text-gray-400">
             {year} Lansar Apps. Todos os direitos reservados.
