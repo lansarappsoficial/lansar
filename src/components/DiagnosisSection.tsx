@@ -1,15 +1,6 @@
-
 import React, { useEffect, useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
 
 const DiagnosisSection: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -77,23 +68,22 @@ const DiagnosisSection: React.FC = () => {
                 <span>Você sai com uma visão clara de como vender mais — com ou sem IA.</span>
               </p>
             </div>
-            
-            <Sheet>
-              <SheetTrigger asChild>
-                <Button className={`cta-button w-full text-lg hover:scale-105 transition-all duration-700 delay-600 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                  SOLICITAR DIAGNÓSTICO GRATUITO <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </SheetTrigger>
-              <SheetContent className="w-full sm:max-w-md md:max-w-lg overflow-y-auto">
-                <SheetHeader>
-                  <SheetTitle>Agende seu Diagnóstico Gratuito</SheetTitle>
-                  <SheetDescription>
-                    Escolha o melhor horário para conversarmos sobre como podemos impulsionar suas vendas.
-                  </SheetDescription>
-                </SheetHeader>
-                <div className="calendly-inline-widget" data-url="https://calendly.com/lansarapps/30min" style={{minWidth:"320px", height:"700px"}}></div>
-              </SheetContent>
-            </Sheet>
+
+            {/* Calendly Link - Nova aba */}
+            <a
+              href="https://calendly.com/lansarapps/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full"
+            >
+              <Button
+                className={`cta-button w-full text-lg hover:scale-105 transition-all duration-700 delay-600 transform ${
+                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                }`}
+              >
+                SOLICITAR DIAGNÓSTICO GRATUITO <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </a>
           </div>
         </div>
       </div>
