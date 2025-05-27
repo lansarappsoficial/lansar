@@ -42,7 +42,7 @@ const CTASection: React.FC = () => {
           </p>
 
           <Button
-            className={`cta-button text-lg hover:scale-105 transition-all duration-700 delay-200 ${
+            className={`cta-button text-base md:text-lg hover:scale-105 transition-all duration-700 delay-200 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
             onClick={() => window.open("https://calendly.com/lansarapps/30min", "_blank")}
