@@ -37,9 +37,10 @@ const HeroSection: React.FC = () => {
             href="https://calendly.com/lansarapps/30min"
             target="_blank"
             rel="noopener noreferrer"
+            className="block w-full sm:w-auto"
           >
             <Button
-              className="cta-button text-lg animate-fade-in hover:scale-105 transition-transform"
+              className="cta-button text-base md:text-lg w-full sm:w-auto whitespace-normal break-words px-6 py-4 animate-fade-in hover:scale-105 transition-transform text-center justify-center"
               style={{ animationDelay: "0.6s" }}
             >
               <span className="mr-2">👉</span> SOLICITE SEU DIAGNÓSTICO GRATUITO <ArrowRight className="ml-2 h-5 w-5" />
