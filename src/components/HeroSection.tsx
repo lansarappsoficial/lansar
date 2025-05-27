@@ -40,7 +40,7 @@ const HeroSection: React.FC = () => {
             className="block w-full sm:w-auto"
           >
             <Button
-              className="cta-button text-base md:text-lg w-full sm:w-auto whitespace-normal break-words px-6 py-4 animate-fade-in hover:scale-105 transition-transform text-center justify-center"
+              className="cta-button text-sm sm:text-base md:text-lg w-full sm:w-auto whitespace-nowrap px-6 py-4 animate-fade-in hover:scale-105 transition-transform text-center justify-center"
               style={{ animationDelay: "0.6s" }}
             >
               <span className="mr-2">👉</span> SOLICITE SEU DIAGNÓSTICO GRATUITO <ArrowRight className="ml-2 h-5 w-5" />
