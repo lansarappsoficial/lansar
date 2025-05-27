@@ -48,7 +48,7 @@ const CTASection: React.FC = () => {
               }`}
               onClick={() => window.open("https://calendly.com/lansarapps/30min", "_blank")}
             >
-              <span className="mr-2">👉</span> QUERO AUMENTAR MINHAS VENDAS <ArrowRight className="ml-2 h-5 w-5" />
+              QUERO AUMENTAR MINHAS VENDAS <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
         </div>
