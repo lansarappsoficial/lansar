@@ -77,7 +77,7 @@ const DiagnosisSection: React.FC = () => {
               className="block w-full"
             >
               <Button
-                className={`cta-button w-full text-lg hover:scale-105 transition-all duration-700 delay-600 transform ${
+                className={`cta-button w-full text-base sm:text-lg hover:scale-105 transition-all duration-700 delay-600 transform ${
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                 }`}
               >
