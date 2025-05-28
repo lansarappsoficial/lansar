@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
                 <img 
                   alt="Lansar Apps" 
                   src="/lovable-uploads/c98d9550-4f29-4c96-ae4c-f2114af17894.png" 
-                  className="h-[80px] max-w-[200px] w-full object-contain -ml-4 md:-ml-8" 
+                  className="h-[80px] max-w-[200px] w-full object-contain -ml-8 md:-ml-16" 
                 />
                 <p className={`text-gray-300 mt-2 max-w-md transform transition-transform duration-700 delay-100 ${isVisible ? 'translate-x-0' : '-translate-x-10'}`}>
                   Automatizando processos comerciais com IA para que você se concentre em fechar negócios.
