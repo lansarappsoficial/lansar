@@ -36,7 +36,11 @@ const Footer: React.FC = () => {
           <div className="col-span-1 md:col-span-2">
             <div className={`transform transition-transform duration-700 ${isVisible ? 'translate-x-0' : '-translate-x-10'}`}>
               <div className="flex flex-col items-start">
-                <img alt="Lansar Apps" src="/lovable-uploads/c98d9550-4f29-4c96-ae4c-f2114af17894.png" className="h-[80px] w-[200px] object-contain ml-0" />
+                <img 
+                  alt="Lansar Apps" 
+                  src="/lovable-uploads/c98d9550-4f29-4c96-ae4c-f2114af17894.png" 
+                  className="h-[80px] max-w-[200px] w-full object-contain" 
+                />
                 <p className={`text-gray-300 mt-2 max-w-md transform transition-transform duration-700 delay-100 ${isVisible ? 'translate-x-0' : '-translate-x-10'}`}>
                   Automatizando processos comerciais com IA para que você se concentre em fechar negócios.
                 </p>
