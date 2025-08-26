@@ -12,7 +12,7 @@ import WhyUsSection from '@/components/WhyUsSection';
 import CTASection from '@/components/CTASection';
 import FAQSection from '@/components/FAQSection';
 import Footer from '@/components/Footer';
-import WhatsAppButton from '@/components/WhatsAppButton';
+
 
 const Index = () => {
   return (
@@ -29,7 +29,7 @@ const Index = () => {
       <CTASection />
       <FAQSection />
       <Footer />
-      <WhatsAppButton />
+      
     </div>
   );
 };
