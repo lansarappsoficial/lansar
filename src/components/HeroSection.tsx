@@ -33,19 +33,27 @@ const HeroSection: React.FC = () => {
             Da prospecção à recompra, transforme seu time de vendas com a Lansar
           </p>
 
-          <a
-            href="https://calendly.com/lansarapps/30min"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block w-full sm:w-auto"
-          >
-            <Button
-              className="cta-button text-sm sm:text-base md:text-lg w-full sm:w-auto whitespace-nowrap px-6 py-4 animate-fade-in hover:scale-105 transition-transform text-center justify-center"
-              style={{ animationDelay: "0.6s" }}
+          <div className="w-full flex flex-col items-center">
+            <a
+              href="https://calendly.com/lansarapps/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full sm:w-auto"
             >
-              <span className="mr-2">👉</span> SOLICITE SEU DIAGNÓSTICO GRATUITO <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-          </a>
+              <Button
+                className="cta-button text-sm sm:text-base md:text-lg w-full sm:w-auto whitespace-nowrap px-6 py-4 animate-fade-in hover:scale-105 transition-transform text-center justify-center"
+                style={{ animationDelay: "0.6s" }}
+              >
+                <span className="mr-2">👉</span> SOLICITE SEU DIAGNÓSTICO GRATUITO <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </a>
+            <p 
+              className="text-xs text-gray-400 mt-2 animate-fade-in"
+              style={{ animationDelay: "0.8s" }}
+            >
+              Ao clicar, você será direcionado para escolher uma data e horário para reunião
+            </p>
+          </div>
         </div>
       </div>
 

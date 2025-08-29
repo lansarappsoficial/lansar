@@ -65,15 +65,20 @@ const Footer: React.FC = () => {
               <li className="text-gray-300">+55 48 988731733</li>
             </ul>
             <div className="mt-6">
-              <a
-                href="https://calendly.com/lansarapps/30min"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button className="cta-button">
-                  Solicitar Diagnóstico
-                </Button>
-              </a>
+              <div className="flex flex-col items-start">
+                <a
+                  href="https://calendly.com/lansarapps/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button className="cta-button">
+                    Solicitar Diagnóstico
+                  </Button>
+                </a>
+                <p className="text-xs text-gray-400 mt-2">
+                  Ao clicar, você será direcionado para escolher uma data e horário para reunião
+                </p>
+              </div>
             </div>
           </div>
         </div>

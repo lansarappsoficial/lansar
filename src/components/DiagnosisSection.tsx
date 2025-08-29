@@ -70,20 +70,27 @@ const DiagnosisSection: React.FC = () => {
             </div>
 
             {/* Calendly Link - Nova aba */}
-            <a
-              href="https://calendly.com/lansarapps/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-full"
-            >
-              <Button
-                className={`cta-button w-full text-base sm:text-lg hover:scale-105 transition-all duration-700 delay-600 transform ${
-                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-                }`}
+            <div className="w-full flex flex-col items-center">
+              <a
+                href="https://calendly.com/lansarapps/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full"
               >
-                SOLICITAR DIAGNÓSTICO GRATUITO <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </a>
+                <Button
+                  className={`cta-button w-full text-base sm:text-lg hover:scale-105 transition-all duration-700 delay-600 transform ${
+                    isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                  }`}
+                >
+                  SOLICITAR DIAGNÓSTICO GRATUITO <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </a>
+              <p className={`text-xs text-white/60 mt-2 transition-all duration-700 delay-700 ${
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+              }`}>
+                Ao clicar, você será direcionado para escolher uma data e horário para reunião
+              </p>
+            </div>
           </div>
         </div>
       </div>
