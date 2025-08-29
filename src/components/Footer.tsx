@@ -67,7 +67,7 @@ const Footer: React.FC = () => {
             <div className="mt-6">
               <div className="flex flex-col items-start">
                 <a
-                  href="https://calendly.com/lansarapps/30min"
+                  href="https://calendly.com/alexandrelansar/30min"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

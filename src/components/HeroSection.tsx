@@ -35,7 +35,7 @@ const HeroSection: React.FC = () => {
 
           <div className="w-full flex flex-col items-center">
             <a
-              href="https://calendly.com/lansarapps/30min"
+              href="https://calendly.com/alexandrelansar/30min"
               target="_blank"
               rel="noopener noreferrer"
               className="block w-full sm:w-auto"

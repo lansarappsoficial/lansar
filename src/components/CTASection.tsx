@@ -46,7 +46,7 @@ const CTASection: React.FC = () => {
               className={`cta-button text-sm sm:text-base md:text-lg w-full max-w-xs sm:max-w-md hover:scale-105 transition-all duration-700 delay-200 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}
-              onClick={() => window.open("https://calendly.com/lansarapps/30min", "_blank")}
+              onClick={() => window.open("https://calendly.com/alexandrelansar/30min", "_blank")}
             >
               QUERO AUMENTAR MINHAS VENDAS <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
