@@ -41,7 +41,7 @@ const CTASection: React.FC = () => {
             Descubra como a inteligência artificial pode revolucionar seu processo de vendas. Solicite agora seu Diagnóstico Gratuito e receba um plano personalizado para escalar seus resultados.
           </p>
 
-          <div className="w-full flex justify-center">
+          <div className="w-full flex flex-col items-center">
             <Button
               className={`cta-button text-sm sm:text-base md:text-lg w-full max-w-xs sm:max-w-md hover:scale-105 transition-all duration-700 delay-200 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
@@ -50,6 +50,11 @@ const CTASection: React.FC = () => {
             >
               QUERO AUMENTAR MINHAS VENDAS <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
+            <p className={`text-xs text-muted-foreground mt-2 transition-all duration-700 delay-300 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}>
+              Ao clicar, você será direcionado para escolher uma data e horário para reunião
+            </p>
           </div>
         </div>
       </div>
