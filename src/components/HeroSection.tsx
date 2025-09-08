@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Zap } from "lucide-react";
+import CalendlyModal from "./CalendlyModal";
 
 const HeroSection: React.FC = () => {
+  const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
+
   return (
     <section className="pt-32 pb-20 md:pt-40 md:pb-32 bg-gradient-to-br from-gray-900 to-gray-800 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMyNTI5MmUiIGZpbGwtb3BhY2l0eT0iMC40Ij48cGF0aCBkPSJNMzYgMzRjMC0yLjItMS44LTQtNC00cy00IDEuOC00IDQgMS44IDQgNCA0IDQtMS44IDQtNHptMC0zMGMwLTIuMi0xLjgtNC00LTRzLTQgMS44LTQgNCAxLjggNCA0IDQgNC0xLjggNC00em0wIDYwYzAtMi4yLTEuOC00LTQtNHMtNCAxLjgtNCA0IDEuOCA0IDQgNCA0LTEuOCA0LTR6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-10"></div>
@@ -11,7 +14,7 @@ const HeroSection: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-block mb-4 bg-lansar bg-opacity-20 px-4 py-1 rounded-full border border-lansar/30 animate-fade-in">
             <span className="text-lansar-light flex items-center text-sm font-medium">
-              <Zap className="h-4 w-4 mr-2" /> Potencialize suas vendas com IA
+              <Zap className="h-4 w-4 mr-2" /> Inteligência Artificial para Empresas
             </span>
           </div>
 
@@ -34,19 +37,13 @@ const HeroSection: React.FC = () => {
           </p>
 
           <div className="w-full flex flex-col items-center">
-            <a
-              href="https://calendly.com/alexandrelansar/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-full sm:w-auto"
+            <Button
+              className="cta-button text-sm sm:text-base md:text-lg w-full sm:w-auto whitespace-nowrap px-6 py-4 animate-fade-in hover:scale-105 transition-transform text-center justify-center"
+              style={{ animationDelay: "0.6s" }}
+              onClick={() => setIsCalendlyOpen(true)}
             >
-              <Button
-                className="cta-button text-sm sm:text-base md:text-lg w-full sm:w-auto whitespace-nowrap px-6 py-4 animate-fade-in hover:scale-105 transition-transform text-center justify-center"
-                style={{ animationDelay: "0.6s" }}
-              >
-                <span className="mr-2">👉</span> SOLICITE SEU DIAGNÓSTICO GRATUITO <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </a>
+              <span className="mr-2">👉</span> AGENDE SEU DIAGNÓSTICO GRATUITO <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
             <p 
               className="text-xs text-gray-400 mt-2 animate-fade-in"
               style={{ animationDelay: "0.8s" }}
@@ -62,6 +59,11 @@ const HeroSection: React.FC = () => {
       {/* Tech decoration elements */}
       <div className="absolute top-20 left-10 w-64 h-64 bg-lansar/5 rounded-full filter blur-3xl"></div>
       <div className="absolute bottom-20 right-10 w-80 h-80 bg-blue-500/5 rounded-full filter blur-3xl"></div>
+
+      <CalendlyModal 
+        isOpen={isCalendlyOpen} 
+        onClose={() => setIsCalendlyOpen(false)} 
+      />
     </section>
   );
 };

@@ -1,9 +1,11 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import CalendlyModal from "./CalendlyModal";
 
 const DiagnosisSection: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
   
   const benefits = [
@@ -71,20 +73,14 @@ const DiagnosisSection: React.FC = () => {
 
             {/* Calendly Link - Nova aba */}
             <div className="w-full flex flex-col items-center">
-              <a
-                href="https://calendly.com/alexandrelansar/30min"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full"
+              <Button
+                className={`cta-button w-full text-base sm:text-lg hover:scale-105 transition-all duration-700 delay-600 transform ${
+                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                }`}
+                onClick={() => setIsCalendlyOpen(true)}
               >
-                <Button
-                  className={`cta-button w-full text-base sm:text-lg hover:scale-105 transition-all duration-700 delay-600 transform ${
-                    isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-                  }`}
-                >
-                  SOLICITAR DIAGNÓSTICO GRATUITO <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </a>
+                AGENDE SEU DIAGNÓSTICO GRATUITO <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
               <p className={`text-xs text-white/60 mt-2 transition-all duration-700 delay-700 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}>
@@ -97,6 +93,11 @@ const DiagnosisSection: React.FC = () => {
       
       <div className="absolute top-20 left-10 w-64 h-64 bg-lansar/10 rounded-full filter blur-3xl"></div>
       <div className="absolute bottom-20 right-10 w-80 h-80 bg-blue-500/10 rounded-full filter blur-3xl"></div>
+
+      <CalendlyModal 
+        isOpen={isCalendlyOpen} 
+        onClose={() => setIsCalendlyOpen(false)} 
+      />
     </section>
   );
 };
