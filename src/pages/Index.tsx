@@ -13,6 +13,7 @@ import CTASection from '@/components/CTASection';
 import FAQSection from '@/components/FAQSection';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import ExitIntentPopup from '@/components/ExitIntentPopup';
 
 
 const Index = () => {
@@ -31,6 +32,7 @@ const Index = () => {
       <FAQSection />
       <Footer />
       <WhatsAppButton />
+      <ExitIntentPopup />
     </div>
   );
 };
