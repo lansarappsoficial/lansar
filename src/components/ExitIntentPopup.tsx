@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { FaWhatsapp, FaTimes } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
 import { Dialog, DialogContent, DialogOverlay } from "@/components/ui/dialog";
 
 const ExitIntentPopup: React.FC = () => {
@@ -14,10 +14,36 @@ const ExitIntentPopup: React.FC = () => {
       }
     };
 
+    const handleBeforeUnload = (e: BeforeUnloadEvent) => {
+      if (!hasShown) {
+        e.preventDefault();
+        setIsOpen(true);
+        setHasShown(true);
+        return "";
+      }
+    };
+
+    const handlePopState = () => {
+      if (!hasShown) {
+        setIsOpen(true);
+        setHasShown(true);
+        // Push the current state back to prevent actual navigation
+        window.history.pushState(null, "", window.location.href);
+      }
+    };
+
+    // Add event listeners
     document.addEventListener('mouseleave', handleMouseLeave);
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    window.addEventListener('popstate', handlePopState);
+    
+    // Push initial state to enable popstate detection
+    window.history.pushState(null, "", window.location.href);
     
     return () => {
       document.removeEventListener('mouseleave', handleMouseLeave);
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+      window.removeEventListener('popstate', handlePopState);
     };
   }, [hasShown]);
 
@@ -32,14 +58,7 @@ const ExitIntentPopup: React.FC = () => {
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogOverlay />
-      <DialogContent className="max-w-md mx-auto bg-white rounded-lg shadow-xl border-0">
-        <button
-          onClick={() => setIsOpen(false)}
-          className="absolute right-4 top-4 text-gray-400 hover:text-gray-600 transition-colors"
-        >
-          <FaTimes className="w-5 h-5" />
-        </button>
-        
+      <DialogContent className="max-w-md mx-auto bg-white rounded-lg shadow-xl border-0">        
         <div className="text-center p-6">
           <div className="mb-4">
             <h3 className="text-xl font-bold text-gray-800 mb-2">
