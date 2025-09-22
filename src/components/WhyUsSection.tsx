@@ -55,7 +55,7 @@ const WhyUsSection: React.FC = () => {
               >
                 <div className="flex items-start">
                   <Check className="text-lansar-light h-6 w-6 mr-3 shrink-0 mt-0.5" />
-                  <p className="text-lg">✅ {benefit}</p>
+                  <p className="text-lg">{benefit}</p>
                 </div>
               </div>
             ))}

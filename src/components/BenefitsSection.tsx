@@ -77,7 +77,7 @@ const BenefitsSection: React.FC = () => {
             </ul>
             
             <p className={`text-lg md:text-xl text-gray-700 transition-all duration-700 delay-800 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              Com a Lansar, isso é realidade para infoprodutores, prestadores de serviços, empresas de tecnologia, indústrias e muitos outros negócios. Criamos IA que cuida de todo o processo comercial para que você possa focar no que realmente importa: <span className="font-semibold text-lansar">fechar negócios</span>.
+              Com a Lansar isso é realidade! Desenvolvemos Automações e Inteligências Artificiais Personalizadas que cuidam de todo o processo comercial para que você possa focar no que realmente importa: <span className="font-semibold text-lansar">fechar negócios</span>.
             </p>
           </div>
         </div>
