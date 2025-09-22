@@ -14,7 +14,7 @@ const HeroSection: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-block mb-4 bg-lansar bg-opacity-20 px-4 py-1 rounded-full border border-lansar/30 animate-fade-in">
             <span className="text-lansar-light flex items-center text-sm font-medium">
-              <Zap className="h-4 w-4 mr-2" /> Inteligência Artificial para Empresas
+              <Zap className="h-4 w-4 mr-2" /> Automação e IA para Empresas
             </span>
           </div>
 
@@ -26,14 +26,14 @@ const HeroSection: React.FC = () => {
             className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 animate-fade-in"
             style={{ animationDelay: "0.2s" }}
           >
-            Automatize sua operação comercial de ponta a ponta com inteligência artificial
+            Automatizamos sua operação comercial de ponta a ponta com inteligência artificial
           </h2>
 
           <p
             className="text-lg text-gray-300 mb-8 animate-fade-in"
             style={{ animationDelay: "0.4s" }}
           >
-            Da prospecção à recompra, transforme seu time de vendas com a Lansar
+            Da prospecção à recompra, simplifique processos e aumente resultados com a Lansar
           </p>
 
           <div className="w-full flex flex-col items-center">
