@@ -1,11 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
-import CalendlyModal from "./CalendlyModal";
+
+declare global {
+  interface Window {
+    Calendly: any;
+  }
+}
 
 const Footer: React.FC = () => {
   const year = new Date().getFullYear();
   const [isVisible, setIsVisible] = useState(false);
-  const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
   const footerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -70,7 +74,7 @@ const Footer: React.FC = () => {
               <div className="flex flex-col items-start">
                 <Button 
                   className="cta-button"
-                  onClick={() => setIsCalendlyOpen(true)}
+                  onClick={() => window.Calendly?.initPopupWidget({url: 'https://calendly.com/alexandrelansar/30min'})}
                 >
                   Agendar Diagnóstico
                 </Button>
@@ -89,10 +93,6 @@ const Footer: React.FC = () => {
         </div>
       </div>
 
-      <CalendlyModal 
-        isOpen={isCalendlyOpen} 
-        onClose={() => setIsCalendlyOpen(false)} 
-      />
     </footer>
   );
 };

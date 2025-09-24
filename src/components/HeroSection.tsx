@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Zap } from "lucide-react";
-import CalendlyModal from "./CalendlyModal";
+
+declare global {
+  interface Window {
+    Calendly: any;
+  }
+}
 
 const HeroSection: React.FC = () => {
-  const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
 
   return (
     <section className="pt-32 pb-20 md:pt-40 md:pb-32 bg-gradient-to-br from-gray-900 to-gray-800 text-white relative overflow-hidden">
@@ -40,7 +44,7 @@ const HeroSection: React.FC = () => {
             <Button
               className="cta-button text-sm sm:text-base md:text-lg w-full sm:w-auto whitespace-nowrap px-6 py-4 animate-fade-in hover:scale-105 transition-transform text-center justify-center"
               style={{ animationDelay: "0.6s" }}
-              onClick={() => setIsCalendlyOpen(true)}
+              onClick={() => window.Calendly?.initPopupWidget({url: 'https://calendly.com/alexandrelansar/30min'})}
             >
               <span className="mr-2">👉</span> AGENDE SEU DIAGNÓSTICO GRATUITO <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
@@ -60,10 +64,6 @@ const HeroSection: React.FC = () => {
       <div className="absolute top-20 left-10 w-64 h-64 bg-lansar/5 rounded-full filter blur-3xl"></div>
       <div className="absolute bottom-20 right-10 w-80 h-80 bg-blue-500/5 rounded-full filter blur-3xl"></div>
 
-      <CalendlyModal 
-        isOpen={isCalendlyOpen} 
-        onClose={() => setIsCalendlyOpen(false)} 
-      />
     </section>
   );
 };
