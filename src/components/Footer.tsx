@@ -68,7 +68,7 @@ const Footer: React.FC = () => {
           <div className={`transform transition-transform duration-700 delay-300 ${isVisible ? 'translate-y-0' : 'translate-y-10'}`}>
             <h3 className="text-lg font-semibold mb-4">Contato</h3>
             <ul className="space-y-2">
-              <li className="text-gray-300">+55 48 988731733</li>
+              <li className="text-gray-300">+55 48 8873-1733</li>
             </ul>
             <div className="mt-6">
               <div className="flex flex-col items-start">
@@ -88,7 +88,7 @@ const Footer: React.FC = () => {
 
         <div className={`mt-12 pt-6 border-t border-gray-800 text-center transform transition-opacity duration-700 delay-400 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
           <p className="text-gray-400">
-            {year} Lansar Apps. Todos os direitos reservados.
+            Desenvolvido por Lansar
           </p>
         </div>
       </div>

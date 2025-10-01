@@ -48,7 +48,7 @@ const ExitIntentPopup: React.FC = () => {
   }, [hasShown]);
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = "5548887317333";
+    const phoneNumber = "554888731733";
     const message = "Olá! Gostaria de agendar um diagnóstico gratuito para saber onde implementar IA na minha empresa..";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');

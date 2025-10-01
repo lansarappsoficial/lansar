@@ -4,7 +4,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 const WhatsAppButton: React.FC = () => {
   const handleWhatsAppClick = () => {
-    const phoneNumber = "5548887317333";
+    const phoneNumber = "554888731733";
     const message = "Olá! Tenho interesse no diagnóstico gratuito para entender melhor como implementar IA na minha empresa e gostaria de mais informações..";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
