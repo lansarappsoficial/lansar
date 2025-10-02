@@ -47,11 +47,11 @@ const ExitIntentPopup: React.FC = () => {
     };
   }, [hasShown]);
 
+  const phoneNumber = "554888731733";
+  const message = "Olá! Gostaria de agendar um diagnóstico gratuito para saber onde implementar IA na minha empresa..";
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
   const handleWhatsAppClick = () => {
-    const phoneNumber = "554888731733";
-    const message = "Olá! Gostaria de agendar um diagnóstico gratuito para saber onde implementar IA na minha empresa..";
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
     setIsOpen(false);
   };
 
@@ -67,13 +67,16 @@ const ExitIntentPopup: React.FC = () => {
             <p className="text-gray-600">Clique aqui 👇</p>
           </div>
           
-          <button
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={handleWhatsAppClick}
             className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white font-semibold py-4 px-6 rounded-lg flex items-center justify-center gap-3 transition-all duration-300 hover:scale-105 shadow-lg"
           >
             <FaWhatsapp className="w-6 h-6" />
             Falar no WhatsApp
-          </button>
+          </a>
           
           <p className="text-xs text-gray-500 mt-3">
             Resposta rápida!
